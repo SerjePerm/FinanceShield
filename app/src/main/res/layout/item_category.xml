@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/itemCategory_cbOnCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/itemCategory_tvName"
+        />
+
+    <ImageView
+        android:id="@+id/itemCategory_ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_cat_airplane"
+        app:layout_constraintStart_toEndOf="@id/itemCategory_cbOnCategory"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/CA_selIcon" />
+
+    <TextView
+        android:id="@+id/itemCategory_tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/TA_unnamed"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/itemCategory_ivIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/itemCategory_tvIsExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/itemCategory_tvName"
+        android:text="@string/CA_category_expense"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

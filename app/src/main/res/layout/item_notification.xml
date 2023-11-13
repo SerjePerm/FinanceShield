@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/item_notification_tvPackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_unnamed"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/item_notification_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_unnamed"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_notification_tvPackage"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/item_notification_tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_text_example"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_notification_tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/item_notification_tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_date"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/item_notification_tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_time"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_notification_tvDate"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/ghost_white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/item_notification_tvText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

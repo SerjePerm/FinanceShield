@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">FinanceShield</string>
+    <!-- Tabs titles -->
+    <string name="tab_home_title">FinanceShield аналитика</string>
+    <string name="tab_transactions_title">FinanceShield операции</string>
+    <string name="tab_categories_title">FinanceShield категории</string>
+    <string name="tab_settings_title">FinanceShield настройки</string>
+
+    <!-- Buttons -->
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_delete">Удалить</string>
+    <string name="btn_back">Назад</string>
+
+    <!-- TransactionActivity -->
+    <string name="TA_type_of_operation">Тип операции: </string>
+    <string name="TA_income">Доход</string>
+    <string name="TA_expense">Расход</string>
+    <string name="TA_title_payee">Наименование / получатель</string>
+    <string name="TA_value">Значение / сумма</string>
+    <string name="TA_card_no">Номер карты</string>
+    <string name="TA_date">Дата:</string>
+    <string name="TA_time">Время:</string>
+    <string name="TA_category">Категория:</string>
+    <string name="TA_unnamed">Без названия</string>
+
+    <!-- TransactionsList (Fragment) -->
+    <string name="add_transaction">Добавить операцию / расход</string>
+    <string name="TF_help_information_text">На данной странице размещены операции. \n\nДля добавления операции нажмите кнопку "+", для редактирования или удаления операции нажмите на саму операцию. \n\nБирюзовым цветом отмечены операции дохода, красным цветом отмечены операции без категории.</string>
+
+    <!-- CategoryActivity -->
+    <string name="CA_type_of_category">Категория </string>
+    <string name="CA_switch_income">дохода</string>
+    <string name="CA_switch_expense">расхода</string>
+    <string name="CA_title_category">Название категории</string>
+    <string name="CA_selIcon">Иконка категории:</string>
+    <string name="CA_category_switch">включить (показывать) данную категорию</string>
+    <string name="CA_category_expense">Категория расхода</string>
+    <string name="CA_category_income">Категория дохода</string>
+
+    <!-- CategoryFragment -->
+    <string name="CF_add_category">Добавить категорию</string>
+    <string name="CF_help_information_text">На данной странице размещены категории расходов и доходов. \n\nДля добавления категории нажмите кнопку "+", для редактирования или удаления операции нажмите на саму операцию. \n\nДля включения / выключения категории нажмите галочку рядом с категорией. Выключенные категории не будут показаны при редактировании операции.</string>
+
+    <!-- settingsFragment -->
+    <string name="SF_common">Общие</string>
+    <string name="SF_show_help_buttons">Показывать кнопки справки / помощи</string>
+    <string name="SF_show_cards_balance">Показывать баланс карт / счетов</string>
+    <string name="SF_push_settings">Push-уведомления</string>
+    <string name="SF_push_switch">Автоматическое распознавание push-уведомлений</string>
+    <string name="SF_push_switch_on">Автоматическое распознавание push-уведомлений включено</string>
+    <string name="SF_push_switch_off">Автоматическое распознавание push-уведомлений выключено</string>
+    <string name="SF_push_about_push">Оповещать push-уведомлением о распознанной операции</string>
+    <string name="SF_push_access_positive">состояние: разрешение на доступ к чтению push-уведомлений получен</string>
+    <string name="SF_push_access_negative">состояние: разрешение на доступ к чтению push-уведомлений не получен</string>
+    <string name="SF_push_access_get">Открыть настройки доступа\nк чтению уведомлений</string>
+    <string name="SF_push_service_positive">состояние: сервис автоматического распознания push-уведомления запущен</string>
+    <string name="SF_push_service_negative">состояние: сервис автоматического распознания push-уведомления не запущен</string>
+    <string name="SF_push_service_start">Проверка состояния сервиса</string>
+    <string name="SF_push_parsers_title">Шаблоны распознования\nPush- уведомлений</string>
+    <string name="SF_links_title">Автоопределение категории\nпо получателю</string>
+    <string name="SF_last_push_list">Последние PUSH-уведомления</string>
+
+    <!-- parsersActivity -->
+    <string name="PSA_add_parsers">Добавить шаблон распознования</string>
+
+    <!-- parserActivity -->
+    <string name="PA_title">Название шаблона</string>
+    <string name="PA_package">Cистемное имя приложения (пакета)</string>
+    <string name="PA_keyword">Ключевое слово</string>
+    <string name="PA_iPayee">Индекс\nполучателя</string>
+    <string name="PA_iValue">Индекс\nзначения</string>
+    <string name="PA_iCard">Индекс\nкарты</string>
+    <string name="PA_iBalance">Индекс\nбаланса</string>
+    <string name="PA_title_example">Пример заголовка сообщения:</string>
+    <string name="PA_text_example">Пример текста сообщения:</string>
+    <string name="PA_example_result">Индексы из текста:</string>
+    <string name="PA_parser_switch">включить (обрабатывать) шаблон</string>
+
+    <!-- parserActivity ArrayForIndex -->
+    <string-array name="IndexesArray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <!-- homeFragment -->
+    <string name="cards">Карты и счета</string>
+
+    <!-- Help -->
+    <string name="help_information_show">Показать справочную информацию</string>
+    <string name="help_information_title">Справка</string>
+
+    <!-- Errors -->
+    <string name="ER_empty_field">Необходимо заполнить поле</string>
+
+</resources>

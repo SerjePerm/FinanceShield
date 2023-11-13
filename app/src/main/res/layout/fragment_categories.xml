@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CategoriesFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories_rvCategories"
+        tools:listitem="@layout/item_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/categories_fbAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_add"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/CF_add_category" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/categories_fbHELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/help_information_show"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_menu_help" />
+
+</FrameLayout>

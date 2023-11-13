@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TransactionsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactions_rvTransactions"
+        tools:listitem="@layout/item_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/transactions_fbADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add_transaction"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_menu_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/transactions_fbHELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/help_information_show"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_menu_help" />
+
+</FrameLayout>

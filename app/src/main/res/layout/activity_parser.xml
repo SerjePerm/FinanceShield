@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.ParserActivity">
+
+    <CheckBox
+        android:id="@+id/parser_cbOnCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:checked="true"
+        android:text="@string/PA_parser_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/parser_ivDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/btn_delete"
+        android:src="@drawable/ic_ui_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parser_etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:autofillHints=""
+        android:hint="@string/PA_title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parser_cbOnCategory" />
+
+    <EditText
+        android:id="@+id/parser_etPackage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="35dp"
+        android:autofillHints=""
+        android:hint="@string/PA_package"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parser_etTitle" />
+
+    <EditText
+        android:id="@+id/parser_etKeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="35dp"
+        android:autofillHints=""
+        android:hint="@string/PA_keyword"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parser_etPackage" />
+
+    <TextView
+        android:id="@+id/parser_tvIPayee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_iPayee"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_etKeyword" />
+
+    <Spinner
+        android:id="@+id/parser_spinPayee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/parser_tvIPayee"
+        app:layout_constraintTop_toTopOf="@+id/parser_tvIPayee"
+        android:entries="@array/IndexesArray"/>
+
+    <TextView
+        android:id="@+id/parser_tvPayeeResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_title_payee"
+        app:layout_constraintStart_toEndOf="@id/parser_spinPayee"
+        app:layout_constraintTop_toTopOf="@id/parser_tvIPayee" />
+
+    <TextView
+        android:id="@+id/parser_tvIValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_iValue"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvIPayee"
+        />
+
+    <Spinner
+        android:id="@+id/parser_spinValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/parser_spinPayee"
+        app:layout_constraintTop_toTopOf="@+id/parser_tvIValue"
+        android:entries="@array/IndexesArray"/>
+
+    <TextView
+        android:id="@+id/parser_tvValueResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_value"
+        app:layout_constraintStart_toEndOf="@id/parser_spinValue"
+        app:layout_constraintTop_toTopOf="@id/parser_tvIValue" />
+
+    <TextView
+        android:id="@+id/parser_tvICard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_iCard"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvIValue"/>
+
+    <Spinner
+        android:id="@+id/parser_spinCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/parser_spinPayee"
+        app:layout_constraintTop_toTopOf="@+id/parser_tvICard"
+        android:entries="@array/IndexesArray"/>
+
+    <TextView
+        android:id="@+id/parser_tvCardResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TA_card_no"
+        app:layout_constraintStart_toEndOf="@id/parser_spinCard"
+        app:layout_constraintTop_toTopOf="@id/parser_tvICard" />
+
+    <TextView
+        android:id="@+id/parser_tvIBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_iBalance"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvICard"/>
+
+    <Spinner
+        android:id="@+id/parser_spinBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/parser_spinPayee"
+        app:layout_constraintTop_toTopOf="@+id/parser_tvIBalance"
+        android:entries="@array/IndexesArray"/>
+
+    <TextView
+        android:id="@+id/parser_tvBalanceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cards"
+        app:layout_constraintStart_toEndOf="@id/parser_spinBalance"
+        app:layout_constraintTop_toTopOf="@id/parser_tvIBalance"/>
+
+    <View
+        android:id="@+id/parser_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvIBalance" />
+
+    <TextView
+        android:id="@+id/parser_tvExampleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_title_example"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/parser_divider1"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        />
+
+    <EditText
+        android:id="@+id/parser_etExampleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvExampleTitle"
+        />
+
+    <TextView
+        android:id="@+id/parser_tvExampleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_text_example"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_etExampleTitle"
+        />
+
+    <EditText
+        android:id="@+id/parser_etExampleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvExampleText"
+        />
+
+    <TextView
+        android:id="@+id/parser_tvExampleResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_example_result"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_etExampleText"
+        />
+
+    <TextView
+        android:id="@+id/parser_tvExampleResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/parser_etTitle"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvExampleResultTitle"
+        />
+
+    <View
+        android:id="@+id/parser_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/parser_tvExampleResult" />
+
+   <Button
+        android:id="@+id/parser_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_ok"
+        app:layout_constraintEnd_toStartOf="@+id/parser_centerPoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parser_divider2" />
+
+    <View
+        android:id="@+id/parser_centerPoint"
+        android:layout_width="0.1dp"
+        android:layout_height="40dp"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/parser_btn_ok" />
+
+    <Button
+        android:id="@+id/parser_btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cancel"
+        app:layout_constraintBaseline_toBaselineOf="@id/parser_btn_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/parser_centerPoint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
